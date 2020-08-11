@@ -64,8 +64,11 @@
 #numero{
     width: 4vw;
 }
-input:invalid{ border: 2px solid red;}
-input:valid{ border: 2px solid green;}
+input:invalid{ 
+    border: 2px solid red;}
+
+input:valid{ 
+    border: 2px solid green;}
 
 @media only screen and (max-width:430px){
 #form{
