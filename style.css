@@ -1,113 +1,82 @@
-:root{
-    --main-cor:brown;
-
-    
-}
-
 *{
     margin: 0;
     padding: 0;
 }
-input{
-    text-align: center;
+#menu{
+    background-color: brown;
+    width: 100%;
+    height: 12vh;
+    border-bottom: solid 3px black;
+   
 }
-body{
-    background-color: rgb(230, 141, 125);
-}
-#header{
-    background-color: var(--main-cor);
-    width: 100vw;
-    height: 6vh;
-    border-bottom: solid 2px black;
-}
-
-#header img{
+#menu img{
     width: 5vw;
-    height: 5vh;
-    margin: 0.5vh;
-
+    margin: 1vh 1vw;
 }
-#header a{
+#menu a{
+    text-decoration: none;
     position: relative;
     float: right;
-    text-decoration: none;
-    margin-top: 1.5vh;
-    margin-right: 1.5vw;
+    margin: 4vh 1vw;
+    font: normal 1.3em Times sans-serif;
     color: black;
-    font-size: 1.5em;
 }
-
-#sec{
-    width: 40vw;
-    background-color: var(--main-cor);
-    margin: 0 auto 0 auto;
+#form{
+    width:40vw;
+    margin: 5vh auto 0 auto;
+    background-color: brown;
     border-radius: 15px;
-    position: relative;
-    bottom: -3vh;
-    border: solid 2px black;
-
-   
-
+    border:solid 3px black;
 }
-
-#sec h2{
-    margin: 5px auto 5px auto;
+#fieldset{
     text-align: center;
     padding: 5px;
-    font: normal 1.8em Helvetica sans-serif;
-
-    
+    border: none;
 }
-
-#info_top{
+#fieldset p{
     text-align: center;
-    margin: 5px auto 5px auto;
-    font-size: 1.1em;
-    position: relative;
+    margin: 8px;
+    font-size: 1.3em;
 }
-
-#info_bot{
+#fieldset label{
     text-align: center;
-    margin: 15px auto 5px auto;
-    font-size: 1.1em;
-    position: relative;
+    margin: 5px 2px;
+    font-size: 1em;
+}
+#fieldset label input{
+    text-align: center;
+    margin: 8px;
+    font-size: 1em;
 }
 
-#sec2{
-    width: 40vw;
-    background-color: var(--main-cor);
-    margin: 0 auto 0 auto;
+ #estado{
+    width: 6vw;
+}
+#bairro{
+    width: 7vw;
+}
+#Cep{
+    width: 5vw;
+}
+#rua{
+    width: 15vw;
+}
+#numero{
+    width: 4vw;
+}
+input:invalid{ border: 2px solid red;}
+input:valid{ border: 2px solid green;}
+
+@media only screen and (max-width:430px){
+#form{
+    width:70vw;
+    margin: 5vh auto 0 auto;
+    background-color: brown;
     border-radius: 15px;
-    border: solid 2px black;
-    position: relative;
-    top: 6vh;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 3px;
-
+    border:solid 3px black;
 }
-#sec2 h2{
-    margin:0 auto 0 auto;
-    text-align: center;
-    padding: 5px;
-    font: normal 1.5em Helvetica sans-serif;
+#cnh{
+    display: block;
 }
 
-.format{
-    margin: 5px;
-}
-.rua{
-    width: 35vw;
-}
-.num{
-    width: 60px;
-}
-footer{
-    background-color: var(--main-cor);
-    width: 100vw;
-    height: 6vh;
-    border-top: solid 2px black;
-    position: absolute;
-    bottom: 0px;
-    
 }

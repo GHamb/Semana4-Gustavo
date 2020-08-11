@@ -4,75 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header id="header">
+    <header id="menu">
         <img src="https://image.flaticon.com/icons/svg/2897/2897777.svg" alt="">
         <a href="#">Consulta</a>
-        <a href="#">Salvar</a>
+        <a href="#" id="salvar">Salvar</a>
     </header>
     <main>
-        <section id="sec">
-            <h2>Dados Pessoais</h2>
-
-            <form>
-                <div id="info_top">
-                    <label for="">Nome Completo: <input type="text" placeholder="Nome"></label>
-                    <label for="">CPF: <input type="text" placeholder="CPF"></label>
-                    <label for="">RG: <input type="text" placeholder="RG"></label>
-                </div>
-                <div id="info_bot">
-                    <label for="">Data de Nascimento: <input type="date" placeholder="Data de Nascimento"></label>
-                    <label for="">Estado Civil: </label><select name="" id="ES">
-
-                        <option value="TIPO 1">Solteiro(a)</option>
-                        <option value="TIPO 2">Casado(a)</option>
-                        <option value="TIPO 3">Divociado(a)</option>
-                        <option value="TIPO 4">Viuvo(a)</option>
-                    </select>
-
-                    <label for="">CNH: </label>
-                    <select name="" id="Cnh">
-
-                        <option value="TIPO 1">Carteira B</option>
-                        <option value="TIPO 2">Carteira A</option>
-
-
-                    </select>
-                </div>
-            </form>
-        </section>
-
-        <section id="sec2">
-            <h2>Endereço</h2>
-
-            <form action="">
-                <label class="format" for="">CEP:<input type="text" class="format"></label>
-                <label for="" class="format">Estado:<input type="text" class="format"></label>
+        <form id="form">
+            <fieldset id="fieldset">
+                <p>Dados Pessoais</p>
+                <label for="Nome">Nome Completo: <input type="text" placeholder="Nome" minlength="6" required></label>
+                <label for="CPF">CPF: <input type="text" placeholder="CPF" minlength="14" maxlength="14" required
+                        oninput=cpf(this) id="CPF"></label>
                 <br>
-                <label for="" class="format">Bairro:<input type="text" class="format"></label>
-
-                <label for="" class="format">Cidade:<input type="text" class="format"></label>
+                <label for="RG">RG: <input type="text" placeholder="RG" required oninput=rg(this) id="RG"></label>
                 <br>
-                <label class="format " for="">Rua:<input type="text" class="format rua"></label>
-                <br>
-                <label for="" class="format">Número:<input type="number" class="format num"></label>
-                <label for="" class="format">Complemento: <select name="" id="complemento" class="format"></label>
+                <label for="dn">Data de Nascimento: <input type="date" placeholder="Data de Nascimento" id="dn"
+                        required></label>
 
-                <option value="TIPO 1">Casa</option>
-                <option value="TIPO 2">Apartamento</option>
-                <option value="TIPO 2">Sítio</option>
+                <label for="ES">Estado Civil: </label><select name="" id="ES">
+                    <option value="TIPO 1">Solteiro(a)</option>
+                    <option value="TIPO 2">Casado(a)</option>
+                    <option value="TIPO 3">Divociado(a)</option>
+                    <option value="TIPO 4">Viuvo(a)</option>
+                </select>
+                <br>
+                <label for="Cnh">CNH: </label>
+                <select name="" id="Cnh">
+                    <option value="TIPO A">Carteira B</option>
+                    <option value="TIPO B">Carteira A</option>
+                    <option value="TIPO C">Não Possui</option>
 
                 </select>
+                <br>
+                <label for="cep">CEP:<input type="text" id="Cep" required oninput=cep(this) minlength="9"
+                        maxlength="9"></label>
 
-            </form>
-        </section>
-        </div>
+                <label for="estado">Estado:<input type="text" id="estado" required></label>
+                <br>
+                <label for="bairro">Bairro:<input type="text" id="bairro" required></label>
+
+                <label for="cidade">Cidade:<input type="text" id="cidade" required></label>
+                <br>
+                <label for="rua">Rua:<input type="text" id="rua" required></label>
+                <label for="numero">Número:<input type="number" id="numero" required></label>
+                <label for="Complemento">Complemento: <select name="" id="complemento"></label>
+
+                <option value="TIPO CS">Casa</option>
+                <option value="TIPO AP">Apartamento</option>
+                <option value="TIPO ST">Sítio</option>
+
+                </select>
+            </fieldset>
+        </form>
     </main>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

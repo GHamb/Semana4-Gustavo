@@ -1,0 +1,20 @@
+Nesta semana você prestará serviços para uma empresa multinacional do setor de manufatura, com a melhora na situação econômica do país, essa empresa está aumentando o seu quadro de funcionários semanalmente, e para isso, precisa de um sistema de cadastro de funcionários mais robusto e eficiente. Você trabalhará em conjunto com outros desenvolvedores neste projeto, e para isso deverá utilizar o GIT para colaborar com estes desenvolvedores. O seu projeto deverá ser atualizado diariamente no GIT.
+
+Para o primeiro dia, vamos começar com a estruturação do formulário de cadastro, que deverá conter os seguintes campos:
+
+Nome do funcionário;
+CPF;
+RG;
+Data de nascimento;
+Tipo da CNH (A ou B);
+Estado civil;
+CEP;
+Rua;
+Bairro;
+Cidade;
+Estado;
+Número;
+Complemento;
+Organize o formulário de maneira eficiente, a maioria dos formulários online são escritos de forma a dar seguimento no preenchimento de cima para baixo. Favoreça campos com letras grandes e medidas relativas para facilitar o preenchimento também por dispositivos móveis.
+
+Nesta semana, ao finalizar, não é necessário anexar nenhum arquivo, apenas informar o endereço web do repositório (público) no GitHub.
