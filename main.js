@@ -1,10 +1,48 @@
 document.getElementById('salvar').addEventListener('click', () => {
+    event.preventDefault()
     if (document.querySelectorAll(':invalid').length > 0) {
         alert("Alguns campos não foram preenchidos corretamente.")
+        verCPF(document.getElementById('CPF'))
+        verRG(document.getElementById('RG'))
+        verCEP(document.getElementById('Cep'))
+
+    } else {
+        const fields = {
+            "nome": form.Nome.value,
+            "CPF": form.CPF.value,
+            "RG": form.RG.value,
+            "data_nasc": form.dn.value,
+            "tipo_cnh": form.Cnh.value,
+            "estado_civil": form.ES.value,
+            "CEP": form.Cep.value,
+            "rua": form.rua.value,
+            "bairro": form.bairro.value,
+            "cidade": form.cidade.value,
+            "estado": form.estado.value,
+            "numero": form.numero.value,
+            "complemento": form.complemento.value
+        }
+        console.log(fields);
+        const obj_jason = JSON.stringify(fields);
+        console.log(obj_jason);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://beginner-api.herokuapp.com/save")
+        xhr.setRequestHeader("Content-Type", "application/json")
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                const resp = JSON.parse(xhr.responseText);
+                console.table(resp)
+                if (resp.Sucesso != undefined) {
+                    alert(resp.Sucesso)
+                } else {
+                    alert('Falha na obtenção da requisição')
+                }
+            }
+
+        }
+        xhr.send(obj_jason);
     }
-    verCPF(document.getElementById('CPF'))
-    verRG(document.getElementById('RG'))
-    verCEP(document.getElementById('Cep'))
 })
 
 
